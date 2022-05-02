@@ -1,3 +1,11 @@
-import { legacy_createStore } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
+import authInfoReducer from "./authReducer";
+import productInfoReducer from "./productReducer";
 
-export const store = legacy_createStore(reducer);
+export const store=configureStore({
+    reducer:{
+        authInfoReducer,
+        productInfoReducer
+    }
+})
+
